@@ -27,15 +27,15 @@ lbl_nome = tk.Label(janela, text = "Digite seu nome:", font = ("Arial", 14))
 lbl_nome.grid(row = 0, column = 0, pady = 10, padx = 10)
 
 ent_nome = tk.Entry(janela, font = ("Arial", 14))
-ent_nome.grid(row = 0, column = 400, pady = 10, padx = 10)
+ent_nome.grid(row = 0, column = 1, pady = 10, padx = 10)
 
 lbl_ano = tk.Label(janela, text = "Ano de nascimento:", font = ("Arial", 14))
 lbl_ano.grid(row = 1, column = 0, pady = 10, padx = 10)
 
 ent_ano = tk.Entry(janela, font = ("Arial", 14))
-ent_ano.grid(row = 1, column = 400, pady = 10, padx = 10)
+ent_ano.grid(row = 1, column = 1, pady = 10, padx = 10)
 
 btn_calculo = tk.Button(janela, text = "Calcular", font = ("Arial", 14), command=calculo)
-btn_calculo.grid(row = 2, column = 400, pady = 10, padx = 10)
+btn_calculo.grid(row = 2, column = 1, pady = 10, padx = 10)
 
 janela.mainloop()
