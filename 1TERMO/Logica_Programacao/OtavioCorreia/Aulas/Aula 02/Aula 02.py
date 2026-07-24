@@ -15,6 +15,7 @@ input("Qual é seu nome?")
 # - = subtração
 # * = multiplicação
 # / = divisão
+# % = calcular o resto de um divisão inteira
 
 # '' = srt
 # "" = numeros
