@@ -3,4 +3,4 @@
 const reasline = require('readline/promises');
 const { stdin: input, stdout: output } = require('process');
 
-async function executar
+// async function executar
