@@ -14,7 +14,7 @@ const classificacao = calculo.classificarConsumo(consumoTotal);
 
 console.log(" ----- RELATÓRIO -----")
 console.log(`Máquina: ${nome.toUpperCase()}`);
-console.log(`Consumo total: ${consumoTotal}`);
+console.log(`Consumo total: ${consumoTotal.toFixed(2)}`);
 console.log(`Custo: R$ ${custo.toFixed(2)}`);
 console.log(`Classificacao de consumo: ${classificacao}`);
 console.log("-".repeat(35));
