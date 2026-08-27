@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    border: aqua 3px dashed;
+    /* dashed - tracejado
+    solid - borda  */
+    border-radius: 20px ;
+    background-color: antiquewhite;
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 60px;
+    padding: 30px;
+}

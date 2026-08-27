@@ -1,0 +1,50 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    color: aliceblue;
+    text-align: center;
+}
+
+nav a{/* a - ajudar a remover o risco do hyperlink  */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;/* text-decoration remove o risco do hyperlink */
+    text-align: center;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.bemvindo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 11px;
+}
+
+.tecnologia{
+    background-color: brown;
+    color: beige;
+    margin: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    left: 70px;
+}
+
+footer {
+    background-color: whitesmoke;
+    border: black 1px solid;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px 20px 30px 40px 
+}
+

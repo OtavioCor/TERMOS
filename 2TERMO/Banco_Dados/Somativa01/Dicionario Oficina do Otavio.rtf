@@ -1,0 +1,373 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 Ano\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Ano
+\par Tipo de dados: year
+\par \f0 
+\par \cf1\b 002 - Atributo: \cf2\b0 Ano\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Ano
+\par Tipo de dados: year
+\par \f0 
+\par \cf1\b 003 - Rela\f1\'e7\'e3o: \cf2\b0 Atende\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Servicos e Funcion\'e1rios
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,1
+\par Funcion\'e1rios chave prim\'e1ria - PK
+\par ID_Funcionarios
+\par Servicos chave prim\'e1ria - PK
+\par ID_Servicos
+\par \f0 
+\par \cf1\b 004 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo CNPJ
+\par Tipo de dados: bigint not null
+\par \f0 
+\par \cf1\b 005 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo CPF
+\par Tipo de dados: varchar(14) not null unique
+\par \f0 
+\par \cf1\b 006 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo CPF
+\par Tipo de dados: varchar(14) not null unique
+\par \f0 
+\par \cf1\b 007 - Atributo: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Cargo
+\par Tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 008 - Atributo: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Categoria
+\par Tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 009 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Clientes
+\par Relacionamentos entre Servicos:
+\par Cardinalidade do relacionamento: 1,n e 1,n \f0 
+\par \cf1\b 010 - Atributo: \cf2\b0 Cor\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Cor
+\par Tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 011 - Atributo: \cf2\b0 Credito\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Cr\'e9dito
+\par Tipo de dados: varchar(10)
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Data_Cadastro\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Data de Cadastro
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 Data_Cadastro\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Data de Cadastro
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Data_Compra\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pela Data da Compra
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 Data_Fornecimento\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Data de Fornecimento
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 016 - Atributo: \cf2\b0 Data_Pagamento\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Data de Pagamento
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 017 - Atributo: \cf2\b0 Data_Servico\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Data de Servi\'e7o
+\par Tipo de dados: timestamp default current_timestamp not null
+\par \f0 
+\par \cf1\b 018 - Atributo: \cf2\b0 Debito\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo D\'e9bito
+\par Tipo de dados: varchar(10)
+\par \f0 
+\par \cf1\b 019 - Rela\f1\'e7\'e3o: \cf2\b0 Demanda\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Veiculos e Pecas
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,n
+\par Pecas chave prim\'e1ria - PK
+\par ID_Pecas
+\par Veiculos chave prim\'e1ria - PK
+\par ID_Veiculos
+\par \f0 
+\par \cf1\b 020 - Atributo: \cf2\b0 Documentacao\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Documenta\'e7\'e3o
+\par Tipo de dados: text not null
+\par \f0 
+\par \cf1\b 021 - Rela\f1\'e7\'e3o: \cf2\b0 Efetua\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Ordem de Servico e Pagamento
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,1
+\par Ordem de Servico chave prim\'e1ria - PK
+\par ID_OrdemServico
+\par Pagamento chave prim\'e1ria - PK
+\par ID_Pagamento
+\par \f0 
+\par \cf1\b 022 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Email
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 023 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Email
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 024 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Email
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Email
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 Empresa\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Empresa
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 027 - Rela\f1\'e7\'e3o: \cf2\b0 Envia\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Fornecedores e Pecas
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,n
+\par Pecas chave prim\'e1ria - PK
+\par ID_Pecas
+\par Servicos chave prim\'e1ria - PK
+\par ID_Fornecedores
+\par \f0 
+\par \cf1\b 028 - Entidade: \cf2\b0 Fornecedores\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Fornecedores
+\par Relacionamentos entre Pecas:
+\par Cardinalidade do relacionamento: 1,n e 1,n \f0 
+\par \cf1\b 029 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Funcionarios
+\par Relacionamentos entre Funcionarios:
+\par Cardinalidade do relacionamento: 1,1 e 1,n \f0 
+\par \cf1\b 030 - Atributo: \cf2\b0 Garantia\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Garantia
+\par Tipo de dados: varchar(10)
+\par \f0 
+\par \cf1\b 031 - Rela\f1\'e7\'e3o: \cf2\b0 Gera\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Ordem de Servico e Servicos
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,1
+\par Ordem de Servico chave prim\'e1ria - PK
+\par ID_OrdemServico
+\par Servicos chave prim\'e1ria - PK
+\par ID_Servicos
+\par \f0 
+\par \cf1\b 032 - Atributo: \cf2\b0 ID_Clientes\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Clientes
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 033 - Atributo: \cf2\b0 ID_Fornecedores\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Fornecedores
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 ID_Funcionarios\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Funcionarios
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 ID_Marcas\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Marcas
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 036 - Atributo: \cf2\b0 ID_Modelos\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Modelos
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 037 - Atributo: \cf2\b0 ID_OrdemServico\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_OrdemServico
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 ID_Pagamento\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Pagamento
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 ID_Pecas\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Pecas
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 ID_Servicos\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Servicos
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 ID_Veiculos\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo ID_Veiculos
+\par Tipo de dados: int auto_increment primary key
+\par \f0 
+\par \cf1\b 042 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Marcas
+\par Relacionamentos entre Ve\'edculos e Modelos:
+\par Cardinalidade do relacionamento(Marcas e Veiculos): 1,n e 1,n
+\par Cardinalidade do relacionamento(Marcas e Modelos): 1,n e 1,n
+\par \f0 
+\par \cf1\b 043 - Entidade: \cf2\b0 Modelos\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Modelos
+\par Relacionamentos entre Marcas:
+\par Cardinalidade do relacionamento: 1,n e 1,n
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 Motor\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Motor
+\par Tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 045 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 048 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo responsavel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par 
+\par \cf1\b 051 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 053 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome
+\par Tipo de dados: varchar(50) not null
+\par \f0 
+\par \cf1\b 054 - Atributo: \cf2\b0 Observacao\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Observacao
+\par Tipo de dados: text
+\par \f0 
+\par \cf1\b 055 - Observa\f1\'e7\'e3o: \cf2\b0 Oficina do Otavio\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 056 - Entidade: \cf2\b0 Ordem de Servico\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Ordem de Servico
+\par Relacionamentos entre Servicos e Pagamento:
+\par Cardinalidade do relacionamento(Ordem de Servico e Servico): 1,1 e 1,n
+\par Cardinalidade do relacionamento(Ordem de Servico e Pagamento): 1,n e 1,1
+\par \f0 
+\par \cf1\b 057 - Atributo: \cf2\b0 OrigemFabricacao\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Origem de Fabricacao
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 058 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Pagamento
+\par Relacionamentos entre Ordem de Servico:
+\par Cardinalidade do relacionamento: 1,1 e 1,n \f0 
+\par \cf1\b 059 - Atributo: \cf2\b0 Pais\cf1\b 
+\par \cf0\b0 Atributo responsavel pelo Pais
+\par Tipo de dados: varchar(20)
+\par 
+\par \cf1\b 060 - Entidade: \cf2\b0 Pecas\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Pecas
+\par Relacionamentos entre Servicos, Fornecedores e Ve\'edculos:
+\par Cardinalidade do relacionamento(Pecas e Servicos): 0,n e 1,n
+\par Cardinalidade do relacionamento(Pecas e Fornecedores): 1,n e 1,n
+\par Cardinalidade do relacionamento(Pecas e Ve\'edculos): 1,n e 1,n
+\par \f0 
+\par \cf1\b 061 - Atributo: \cf2\b0 Pix\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Pix
+\par Tipo de dados: varchar(10)
+\par \f0 
+\par \cf1\b 062 - Atributo: \cf2\b0 Placa\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Placa
+\par Tipo de dados: varchar(8)
+\par \f0 
+\par \cf1\b 063 - Rela\f1\'e7\'e3o: \cf2\b0 Precisa\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Modelos e Marcas
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,n
+\par Marcas chave prim\'e1ria - PK
+\par ID_Marcas
+\par Modelos chave prim\'e1ria - PK
+\par ID_Modelos
+\par \f0 
+\par \cf1\b 064 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Atributo responsavel pelo Pre\f1\'e7o
+\par Tipo de dados: decimal
+\par \f0 
+\par \cf1\b 065 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Pre\'e7o
+\par Tipo de dados: decimal
+\par \f0 
+\par \cf1\b 066 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Quantidade
+\par Tipo de dados: int
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Quantidade
+\par Tipo de dados: int
+\par \f0 
+\par \cf1\b 068 - Atributo: \cf2\b0 Registro\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Registro
+\par Tipo de dados: text not null
+\par \f0 
+\par \cf1\b 069 - Rela\f1\'e7\'e3o: \cf2\b0 Requer\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Veiculos e Marcas
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,n
+\par Marcas chave prim\'e1ria - PK
+\par ID_Marcas
+\par Veiculos chave prim\'e1ria - PK
+\par ID_Veiculos
+\par \f0 
+\par \cf1\b 070 - Rela\f1\'e7\'e3o: \cf2\b0 Requer\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Servicos e Pecas
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 0,n
+\par Pecas chave prim\'e1ria - PK
+\par ID_Pecas
+\par Servicos chave prim\'e1ria - PK
+\par ID_Servicos
+\par \f0 
+\par \cf1\b 071 - Entidade: \cf2\b0 Servicos\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Servicos
+\par Relacionamentos entre Clientes, Ordem de Servico, Pecas e Funcionarios:
+\par Cardinalidade do relacionamento(Servicos e Clientes): 1,n e 1,n
+\par Cardinalidade do relacionamento(Servicos e Ordem de Servico): 1,n e 1,1
+\par Cardinalidade do relacionamento(Servicos e Pecas): 1,n e 0,n
+\par Cardinalidade do relacionamento(Servicos e Funcionarios): 1,n e 1,1
+\par \f0 
+\par \cf1\b 072 - Rela\f1\'e7\'e3o: \cf2\b0 Solicita\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Clientes e Servicos
+\par Cardinalidade da rela\'e7\'e3o de 1,n e 1,n
+\par Servicos chave prim\'e1ria - PK
+\par ID_Servicos
+\par Clientes chave prim\'e1ria - PK
+\par ID_Clientes
+\par \f0 
+\par \cf1\b 073 - Atributo: \cf2\b0 Status_Servico\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Status de Servi\'e7o
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 074 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Telefone
+\par Tipo de dados: varchar(15)
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Telefone
+\par Tipo de dados: charchar(15)
+\par \f0 
+\par \cf1\b 076 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Tipo de Servi\'e7o
+\par Tipo de dados: varchar(14)
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Tipo
+\par Tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 078 - Atributo: \cf2\b0 Turno\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Turno
+\par Tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 079 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Valor
+\par Tipo de dados: decimal not null
+\par \f0 
+\par \cf1\b 080 - Entidade: \cf2\b0 Veiculos\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Veiculos
+\par Relacionamentos entre Pecas e Marcas:
+\par Cardinalidade do relacionamento(Veiculos e Pecas): 1,n e 1,n
+\par Cardinalidade do relacionamento(Veiculos e Marcas): 1,n e 1,n
+\par \f0 
+\par 
+\par }
+ 
