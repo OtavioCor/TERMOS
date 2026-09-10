@@ -1,0 +1,44 @@
+/* Configurações Gerais  */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgba(81, 112, 250, 0.575);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+header h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main {
+    margin: 30px;
+}
+
+section {
+    border: 30px solid ;
+    border-width: 30px;
+    border-color: #1e3a5f;
+    padding: 20px;
+}
+
+.servicos {
+    margin: 20px;
+    padding: 15px;
+    background-color: aliceblue;
+    border: 10px solid aliceblue;
+}
