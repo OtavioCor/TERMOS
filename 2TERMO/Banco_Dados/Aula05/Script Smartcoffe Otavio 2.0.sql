@@ -42,7 +42,7 @@ CNPJ int not null,
 Data_Fornecedor date,
 Quantidade int not null);
 
-create table Programa_FIdelidade (
+create table Programa_Fidelidade (
 ID_Programa int auto_increment primary key,
 Nome varchar(60) not null,
 CPF varchar(14) not null unique,
