@@ -9,3 +9,6 @@ const numero1 = entrada.questionInt("Qual sua nota 1: ");
 const numero2 = entrada.questionInt("Qual sua nota 2: ");
 const resultado = calcularMedia(numero1, numero2)
 console.log(`A media calculada foi: ${resultado}`);
+
+
+''
