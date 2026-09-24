@@ -49,7 +49,7 @@ CREATE TABLE item_pedido (
     id_item INT PRIMARY KEY AUTO_INCREMENT,
     preco_unitario DECIMAL(10, 2) NOT NULL,
     observacao VARCHAR(150),
-    qunatidade INT NOT NULL,
+    quantidade INT NOT NULL,
 
     id_produto INT NOT NULL,
     CONSTRAINT fk_item_produto FOREIGN KEY (id_produto)
@@ -124,5 +124,31 @@ INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
 
 SELECT * FROM pedido;
 
-INSERT INTO item_pedido (preco_unitaro, observacao, quantidade, id_produto, id_pedido) VALUES
-()
+INSERT INTO item_pedido (preco_unitario, observacao, quantidade, id_produto, id_pedido) VALUES
+(5.00, 'Sem açúcar', 2, 1, 1),
+(12.00, 'Bem assado', 1, 4, 1),
+(9.50, 'Com canela em pó', 1, 2, 2),
+(4.00, 'Quentinho', 2, 5, 2),
+(8.00, 'Sem observação', 1, 6, 3),
+(9.00, 'Gelo e adoçante', 1, 3, 4),
+(4.00, 'Para viagem', 2, 5, 5);
+
+SELECT * FROM item_pedido;
+
+INSERT INTO forma_pagamento (descricao) VALUES
+('Dinheiro'),
+('Cartão de Crédito'),
+('Cartão de Débito'),
+('Pix'),
+('Vale Refeição');
+
+SELECT * FROM forma_pagamento;
+
+INSERT INTO pagamento (valor, data_pagamento, id_pedido, id_forma_pagamento) VALUES
+(67.67, '2026-09-07 23:35:00', 1, 4),
+(3.50, '2026-09-10 11:05:00', 2, 1),
+(666.00, '2026-09-16 17:45:00', 3, 2),
+(43.99, '2026-09-22 01:05:00', 4, 3),
+(23.00, NOW(), 5, 4);
+
+SELECT * FROM pagamento;
