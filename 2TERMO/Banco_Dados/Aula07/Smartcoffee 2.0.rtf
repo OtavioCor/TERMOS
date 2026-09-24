@@ -1,0 +1,349 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Rela\f1\'e7\'e3o: \cf2\b0 Atende\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Funcion\'e1rios e Pedidos
+\par Cardinalidade do relacionamento (Funcion\'e1rios e Pedidos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 002 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 Atributo da entidade Fornecedor
+\par 
+\par Tipo: VARCHAR(14)
+\par 
+\par \cf1\b 003 - Atributo: \cf2\b0 CPF_cliente\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo CPF do cliente
+\par Tipo: varchar(20) not null
+\par \f0 
+\par \cf1\b 004 - Atributo: \cf2\b0 CPF_funcionario\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo CPF do funcionario
+\par Tipo: varchar(20) not null
+\par \f0 
+\par \cf1\b 005 - Atributo: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 Atributo da entidade Funcionarios
+\par Tipo: VARCHAR(50)
+\par 
+\par \cf1\b 006 - Atributo: \cf2\b0 Cartao\cf1\b 
+\par \cf0\b0 Atributo da entidade Pagamento (Forma de pagamento)
+\par Tipo: BOOLEAN
+\par 
+\par \cf1\b 007 - Atributo: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 008 - Entidade: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Categoria
+\par Relacionamentos entre categoria e produtos
+\par Cardinalidade do relacionamento (Clientes e Programa de fidelidade): 1,1 e 1,1 \f0 
+\par \cf1\b 009 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Clientes
+\par Relacionamentos entre clientes, programa de fidelidade e pedidos
+\par Cardinalidade do relacionamento (Clientes e Programa de fidelidade): 1,n e 1,1
+\par Cardinalidade do relacionamento (Clientes e Pedidos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 010 - Rela\f1\'e7\'e3o: \cf2\b0 Consome \cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Clientes e Produtos
+\par Cardinalidade do relacionamento (Clientes e Produtos): 1,n e 1,n
+\par \f0 
+\par \cf1\b 011 - Rela\f1\'e7\'e3o: \cf2\b0 Contem\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Pedidos e Produtos
+\par Cardinalidade do relacionamento (Pedidos e Produtos): 1,n e 1,n
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Data_Cadastro_cliente\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pela Data de Cadastro do cliente
+\par Tipo: datetime
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 Data_Criacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Data_admissao\cf1\b 
+\par \cf0\b0 Atributo: Data_admissao
+\par Atributo da entidade Funcionarios
+\par Tipo: DATE
+\par 
+\par \cf1\b 015 - Atributo: \cf2\b0 Data_fornecedor\cf1\b 
+\par \cf0\b0 Atributo: Data_fornecedor
+\par Atributo da entidade Fornecedor
+\par Tipo: DATE
+\par 
+\par \cf1\b 016 - Atributo: \cf2\b0 Data_hora_pagamento\cf1\b 
+\par \cf0\b0 Atributo: Data_hora_pagamento
+\par Atributo da entidade Pagamento
+\par Tipo: DATETIME
+\par 
+\par \cf1\b 017 - Atributo: \cf2\b0 Data_hora_pedido\cf1\b 
+\par \cf0\b0 Atributo: Data_hora_pedido
+\par Atributo da entidade Pedidos
+\par Tipo: DATETIME
+\par 
+\par \cf1\b 018 - Atributo: \cf2\b0 Data_hora_saida\cf1\b 
+\par \cf0\b0 Atributo: Data_hora_saida
+\par Atributo da entidade Delivery
+\par Tipo: DATETIME
+\par 
+\par \cf1\b 019 - Atributo: \cf2\b0 Data_ultima_atualizacao\cf1\b 
+\par \cf0\b0 Atributo: Data_Criacao
+\par Atributo da entidade Programa de fidelidade
+\par Tipo: DATE
+\par 
+\par \cf1\b 020 - Atributo: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 021 - Entidade: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Delivery
+\par Relacionamentos entre pedidos e delivery
+\par Cardinalidade do relacionamento (Clientes e Programa de fidelidade): 1,n e 1,1 \f0 
+\par \cf1\b 022 - Atributo: \cf2\b0 Descricao_categoria\cf1\b 
+\par \cf0\b0 Atributo: Descricao
+\par Atributo da entidade Categoria
+\par Tipo: TEXT
+\par 
+\par \cf1\b 023 - Atributo: \cf2\b0 Descricao_produto\cf1\b 
+\par \cf0\b0 Atributo: Descricao
+\par Atributo da entidade Produtos
+\par Tipo: TEXT
+\par 
+\par \cf1\b 024 - Atributo: \cf2\b0 Dinheiro\cf1\b 
+\par \cf0\b0 Atributo: Dinheiro
+\par Atributo da entidade Pagamento (Forma de pagamento)
+\par Tipo: BOOLEAN
+\par 
+\par \cf1\b 025 - Atributo: \cf2\b0 E-mail_cliente\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 026 - Atributo: \cf2\b0 Empresa\cf1\b 
+\par \cf0\b0 Atributo: Empresa
+\par Atributo da entidade Fornecedor
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 027 - Atributo: \cf2\b0 Endereco_entrega\cf1\b 
+\par \cf0\b0 Atributo: Endereco_entrega
+\par Atributo da entidade Delivery
+\par Tipo: VARCHAR(255)
+\par 
+\par \cf1\b 028 - Rela\f1\'e7\'e3o: \cf2\b0 Entrega\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Delivery e Pedidos
+\par 
+\par Cardinalidade do relacionamento (Delivery e Pedidos): 1,1 e 1,1
+\par \f0 
+\par \cf1\b 029 - Rela\f1\'e7\'e3o: \cf2\b0 Envia\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Fornecedor e Estoque
+\par 
+\par Cardinalidade do relacionamento (Fornecedor e Estoque): 1,n e 1,1
+\par \f0 
+\par \cf1\b 030 - Entidade: \cf2\b0 Estoque\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Estoque
+\par Relacionamentos entre estoque, produtos e fornecedor
+\par Cardinalidade do relacionamento: 1,n e 1,1 \f0 
+\par \cf1\b 031 - Atributo: \cf2\b0 Forma_pagamento\cf1\b 
+\par \cf0\b0 Atributo: Forma_pagamento
+\par Atributo da entidade Pagamento
+\par Tipo: VARCHAR(30)
+\par 
+\par \cf1\b 032 - Entidade: \cf2\b0 Fornecedor\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Fornecedor
+\par Relacionamentos entre fornecedor e estoque
+\par Cardinalidade do relacionamento: 1,n e 1,1 \f0 
+\par \cf1\b 033 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Funcionarios
+\par 
+\par Relacionamentos entre funcionarios e pedidos
+\par 
+\par Cardinalidade do relacionamento (Funcionarios e Pedidos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 034 - Rela\f1\'e7\'e3o: \cf2\b0 Gera\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Pedidos e Pagamento
+\par Cardinalidade do relacionamento (Pedidos e Pagamento): 1,1 e 1,1
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 Id_Categorias\cf1\b 
+\par \cf0\b0 Atributo: Id_Categorias
+\par Atributo da entidade Categoria (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 036 - Atributo: \cf2\b0 Id_Cliente\cf1\b 
+\par \cf0\b0 Atributo: Id_Cliente
+\par Atributo da entidade Clientes (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 037 - Atributo: \cf2\b0 Id_Delivery\cf1\b 
+\par \cf0\b0 Atributo: Id_Delivery
+\par Atributo da entidade Delivery (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 Id_Estoque\cf1\b 
+\par \cf0\b0 Atributo: Id_Estoque
+\par Atributo da entidade Estoque (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 Id_Fidelidade\cf1\b 
+\par \cf0\b0 Atributo: Id_Fidelidade
+\par Atributo da entidade Programa de fidelidade (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 Id_Fornecedor\cf1\b 
+\par \cf0\b0 Atributo: Id_Fornecedor
+\par Atributo da entidade Fornecedor (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 Id_Funcionario\cf1\b 
+\par \cf0\b0 Atributo: Id_Funcionario
+\par Atributo da entidade Funcionarios (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 Id_Pagamento\cf1\b 
+\par \cf0\b0 Atributo: Id_Pagamento
+\par Atributo da entidade Pagamento (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 043 - Atributo: \cf2\b0 Id_Pedidos\cf1\b 
+\par \cf0\b0 Atributo: Id_Pedidos
+\par Atributo da entidade Pedidos (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 Id_Produto\cf1\b 
+\par \cf0\b0 Atributo: Id_Produto
+\par Atributo da entidade Produtos (Chave prim\f1\'e1ria)
+\par Tipo: INT
+\par \f0 
+\par \cf1\b 045 - Atributo: \cf2\b0 Nome_categoria\cf1\b 
+\par \cf0\b0 Atributo: Nome
+\par Atributo da entidade Categoria
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 046 - Atributo: \cf2\b0 Nome_cliente\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Nome do cliente
+\par Tipo: varchar(50) not null
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 Nome_fornecedor\cf1\b 
+\par \cf0\b0 Atributo: Nome
+\par Atributo da entidade Fornecedor
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 048 - Atributo: \cf2\b0 Nome_funcionario\cf1\b 
+\par \cf0\b0 Atributo: Nome_funcionario
+\par Atributo da entidade Funcionarios
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nome_insumo\cf1\b 
+\par \cf0\b0 Atributo: Nome_insumo
+\par Atributo da entidade Estoque
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nome_produto\cf1\b 
+\par \cf0\b0 Atributo: Nome_produto
+\par Atributo da entidade Produtos
+\par Tipo: VARCHAR(100)
+\par 
+\par \cf1\b 051 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Pagamento
+\par Relacionamentos entre pedidos e pagamentos
+\par Cardinalidade do relacionamento (Clientes e Programa de fidelidade): 1,n e 1,1 \f0 
+\par \cf1\b 052 - Rela\f1\'e7\'e3o: \cf2\b0 Participa\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Clientes e Programa de fidelidade
+\par 
+\par Cardinalidade do relacionamento (Clientes e Programa de fidelidade): 1,1 e 1,n
+\par \f0 
+\par \cf1\b 053 - Entidade: \cf2\b0 Pedidos\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Pedidos
+\par Relacionamentos entre pedidos, clientes, funcionarios, produtos, pagamento e delivery
+\par 
+\par Cardinalidade do relacionamento (Pedidos e Clientes): 1,1 e 1,n
+\par 
+\par Cardinalidade do relacionamento (Pedidos e Funcionarios): 1,1 e 1,n
+\par Cardinalidade do relacionamento (Pedidos e Produtos): 1,n e 1,n
+\par Cardinalidade do relacionamento (Pedidos e Pagamento): 1,1 e 1,1
+\par 
+\par Cardinalidade do relacionamento (Pedidos e Delivery): 1,1 e 1,1
+\par \f0 
+\par \cf1\b 054 - Atributo: \cf2\b0 Pix\cf1\b 
+\par \cf0\b0 Atributo: Pix
+\par Atributo da entidade Pagamento (Forma de pagamento)
+\par Tipo: BOOLEAN
+\par 
+\par \cf1\b 055 - Rela\f1\'e7\'e3o: \cf2\b0 Possui\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Categoria e Produtos
+\par 
+\par Cardinalidade do relacionamento (Categoria e Produtos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 056 - Atributo: \cf2\b0 Preco_unitario\cf1\b 
+\par \cf0\b0 Atributo: Preco_unitario
+\par Atributo da entidade Produtos
+\par Tipo: DECIMAL(10,2)
+\par 
+\par \cf1\b 057 - Atributo: \cf2\b0 Presencial\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 058 - Entidade: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Produtos
+\par 
+\par Relacionamentos entre produtos, categoria, pedidos e estoque
+\par Cardinalidade do relacionamento (Produtos e Categoria): 1,1 e 1,n
+\par Cardinalidade do relacionamento (Produtos e Pedidos): 1,n e 1,n
+\par Cardinalidade do relacionamento (Produtos e Estoque): 1,1 e 1,n
+\par \f0 
+\par \cf1\b 059 - Entidade: \cf2\b0 Programa de fidelidade\cf1\b 
+\par \cf0\b0 Tabela respons\f1\'e1vel por organizar as informa\'e7\'f5es sobre os Programa de fidelidade
+\par Relacionamentos entre clientes e programa de fidelidade 
+\par Cardinalidade do relacionamento : 1,n e 1,1 \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 Quantidade_atual\cf1\b 
+\par \cf0\b0 Atributo: Quantidade_atual
+\par Atributo da entidade Estoque
+\par Tipo: DECIMAL(10,3)
+\par 
+\par \cf1\b 061 - Atributo: \cf2\b0 Quantidade_fornecedor\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 062 - Atributo: \cf2\b0 Quantidade_minima\cf1\b 
+\par \cf0\b0 Atributo: Quantidade_minima
+\par Atributo da entidade Estoque
+\par Tipo: DECIMAL(10,3)
+\par 
+\par \cf1\b 063 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Clientes e Pedidos
+\par 
+\par Cardinalidade do relacionamento (Clientes e Pedidos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 064 - Rela\f1\'e7\'e3o: \cf2\b0 Relaciona\cf1\b 
+\par \cf0\b0\f0 Rela\f1\'e7\'e3o entre Categoria e Produtos
+\par 
+\par Cardinalidade do relacionamento (Categoria e Produtos): 1,n e 1,1
+\par \f0 
+\par \cf1\b 065 - Atributo: \cf2\b0 Salario\cf1\b 
+\par \cf0\b0 Atributo: Salario
+\par Atributo da entidade Funcionarios
+\par Tipo: DECIMAL(10,2)
+\par 
+\par \cf1\b 066 - Atributo: \cf2\b0 Saldo_pontos\cf1\b 
+\par \cf0\b0 Atributo: Saldo_pontos
+\par Atributo da entidade Programa de fidelidade
+\par Tipo: INT
+\par 
+\par \cf1\b 067 - Atributo: \cf2\b0 Setor\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 068 - Observa\f1\'e7\'e3o: \cf2\b0 SmartCoffee\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 Status_categoria\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 070 - Atributo: \cf2\b0 Status_entrega\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 071 - Atributo: \cf2\b0 Status_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 072 - Atributo: \cf2\b0 Status_pedidos\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 073 - Atributo: \cf2\b0 Taxa_entrega\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 074 - Atributo: \cf2\b0 Telefone_cliente\cf1\b 
+\par \cf0\b0 Atributo respons\f1\'e1vel pelo Telefone do cliente
+\par Tipo: varchar(10)
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 Tipo_pedido\cf1\b 
+\par \cf0\b0 Atributo: Presencial
+\par Atributo da entidade Pedidos (Tipo de pedido)
+\par Tipo: BOOLEAN
+\par 
+\par \cf1\b 076 - Atributo: \cf2\b0 Unidade_medida\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 077 - Atributo: \cf2\b0 Valor_pago\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 078 - Atributo: \cf2\b0 Valor_total\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 079 - Atributo: \cf2\b0 kg\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 080 - Atributo: \cf2\b0 ml\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 081 - Atributo: \cf2\b0 un\cf1\b 
+\par \cf0\b0 
+\par 
+\par }
+ 
