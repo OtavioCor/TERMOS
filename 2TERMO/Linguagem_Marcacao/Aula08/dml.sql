@@ -152,3 +152,63 @@ INSERT INTO pagamento (valor, data_pagamento, id_pedido, id_forma_pagamento) VAL
 (23.00, NOW(), 5, 4);
 
 SELECT * FROM pagamento;
+
+-- EXEMPLO NOVO DE INSERÇÃO DE DADOS PORÉM COM RECUPERAÇÃO DO ÚLTIMO ID    
+
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES 
+(NOW(), 'ABERTO','0.00',1);
+SET @pedido = LAST_INSERT_ID();
+SELECT @pedido
+
+------------------------------------------------------------------------------------------
+
+-- Atualizações e modificações de dados
+UPDATE cliente 
+SET telefone = '1999888801'
+WHERE id_cliente = 11;
+
+UPDATE produto
+SET preco = 1.00;
+-- NUNCA REALIIZAR UM UPDATE SEM --- WHERE 😤
+ 
+UPDATE cliente
+SET telefone = '1997777701',
+cidade = 'Valinhos'
+Where id_cliente = 11;
+
+-- Ajuste de valor
+UPDATE produto
+SET preco = preco * 1.05
+WHERE id_categoria = 1;
+
+-- Ajuste de atualizações condicionais
+UPDATE produto
+SET preco = CASE
+    WHEN preco < 10 THEN preco * 1.10
+    ELSE preco * 1.05
+END
+WHERE ativo = TRUE;
+
+------------------------------------------------------------------------------------------
+
+-- APAGAR DADOS DO BD
+
+-- Apagar um cliente específico
+DELETE FROM cliente
+WHERE id_cliente = 2;
+
+-- Apagar todos os clientes inativos
+
+DELETE FROM cliente 
+WHERE ativo = FALSE;
+
+-- Apagar todos os clientes de uma cidade específica
+DELETE FROM cliente 
+WHERE cidade = 'Chicago';
+
+-- Exclusão lógica
+UPDATE cliente 
+SET ativo = FALSE
+WHERE id_cliente = 10;
+
+
