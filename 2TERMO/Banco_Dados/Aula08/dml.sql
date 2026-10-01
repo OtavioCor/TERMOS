@@ -211,4 +211,34 @@ UPDATE cliente
 SET ativo = FALSE
 WHERE id_cliente = 10;
 
+-- TRANSAÇÕES - SEGURANÇA PARA DML
+START TRANSACTION;
+UPDATE produto
+SET preco = preco * 2.80
+WHERE id_categoria = 1;
+
+SELECT id_produto, nome, preco
+FROM produto
+WHERE id_categoria = 1;
+
+-- DESFEZ O QUE FIZEMOS ERRADO OU VOLTA UMA TRANSAÇÃO
+ROLLBACK;
+
+-- VALIDA O PROCEDIMENTO DE TRANSIÇÃO
+COMMIT;
+
+START TRANSACTION;
+
+UPDATE cliente 
+SET cidade = 'Santos' 
+WHERE id_cliente = 15;
+
+SELECT*FROM cliente WHERE id_cliente=15
+
+COMMIT;
+
+ROLLBACK;
+
+-- PROCEDIMENTO DE UMA COMPRA
+
 
