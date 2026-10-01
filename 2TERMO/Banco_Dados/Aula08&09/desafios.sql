@@ -184,18 +184,25 @@ SELECT * FROM categoria;
 
 -- 17. Tente inserir um produto com id_categoria = 9999.
 -- Qual restrição impediu a operação?
-
+INSERT INTO produto (nome, preco, ativo, id_categoria) VALUES
+('Cupcake', 9.00, TRUE, 9999);
+-- Restrição - Cannot add or update a child row
 
 -- 18. Tente cadastrar um cliente usando 'ana@email.com'.
 -- Qual restrição impediu a operação?
-
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Ana Julia','ana@email.com','19952982441','Limeira',TRUE);
+-- Restrição - Não permite email duplicado
 
 -- 19. Tente criar um pedido com id_cliente = 9999.
 -- Qual restrição impediu a operação?
-
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
+('2026-09-05 23:32:00', 'cancelado', 67.67, 9999);
+-- Restrição - Cannot add or update a child row
 
 -- 20. Escreva em comentários a diferença entre os três erros anteriores.
-
+-- Os exercícios 17 e 19 falharam devido a restrições da FK, pois tentaram usar de referencia IDs que não existem.
+-- O exercício 18 falhou devido a uma restrição do UK, pois tentou cadastrar um e-mail que já existia na tabela.
 
 -- PARTE E - DESAFIO COMPLETO COM TRANSAÇÃO
 
