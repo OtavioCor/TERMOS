@@ -240,5 +240,47 @@ COMMIT;
 ROLLBACK;
 
 -- PROCEDIMENTO DE UMA COMPRA
+-- PASSO 1:
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Carlos SIlva', 'carlos.silva@gmail.com','19999999999','Santos',TRUE);
+SET @cliente_compra = LAST_INSERT_ID();
 
+-- PASSO 2
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES 
+(NOW(), 'ABERTO', 0.00, @cliente_compra);
+SET @pedido_compra = LAST_INSERT_ID();
 
+-- PASSO 3
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALUES
+(@pedido_compra,4,1,13.00), 
+(@pedido_compra,9,1,9.00);
+
+-- PASSO 4 - ATUALIZANDO TOTAL E STATUS
+UPDATE pedido
+SET valor_total = 22.00,
+status_pedido = 'PREPARANDO'
+WHERE id_pedido = @pedido_compra;
+
+-- PASSO 5 - REGISTRAR PAGAMENTO
+INSERT INTO pagamento (id_pedido, id_forma_pagamento, valor, data_pagamento) VALUES
+(@pedido_compra,2,22.00,NOW());
+
+-- PASSO 6 - CONSULTAR PEDIDO E RESULTADO
+
+SELECT p.id_pedido,
+        c.nome AS Cliente,
+        p.status_pedido AS StatusPedido,
+        p.valor_total AS ValorTotal
+FROM pedido p
+JOIN cliente c ON c.id_cliente = p.id_cliente
+WHERE p.id_pedido = @pedido_compra;
+
+-- PASSO 7 - RELATÓRIO
+
+-- PASSO 1
+SELECT nome
+FROM cliente
+WHERE id_cliente = @cliente_compra;
+
+-- PASSO 2
+SELECT * FROM pedido WHERE id_pedido = @pedido_compra;
