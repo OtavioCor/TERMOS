@@ -1,6 +1,47 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 body{
     margin: 0;
     padding: 0;
+}
+
+/* --- CABEÇALHO --- */
+.TituloSmart {
+    color: white;
+}
+.TituloCafe {
+    color: #b35f11;
+}
+.navegacao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- INICIO --- */
+.titulo-laranja{
+    color: #C26B18;
+    padding: 0px 0px 0px 40px;
+    letter-spacing: 8px;
+}
+.titulo-conecta{
+    font-size: 50px;
+    padding: 0px 0px 0px 40px;
+}
+.subtitulo{
+    padding: 0px 0px 0px 40px;
+}
+.inicio-cadapio{
+    margin: 0px 0px 0px 40px;
+}
+.foto{
+    display: flex
+    justif
+}
+
+h2 {
+    font-size: 20px;
 }
 
 nav a {
@@ -10,15 +51,21 @@ nav a {
     padding: 5px;
 }
 
+ul{
+    display: flex;
+    gap: 23px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 article {
     background-color: white;
-    margin: 160px;
+    margin: 10px;
     padding: 140px;
 }
 
-.titulo-laranja{
-    color: #C26B18;
-}
+
 
 .centralizar{
     text-align: center;
@@ -50,13 +97,10 @@ button{
 .banner-taupe{
     background-color: #A69279;
     padding: 10px;
-}
-.banner-taupe h1{
-    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h2 {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-}
+
 
