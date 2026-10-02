@@ -1,0 +1,52 @@
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: space-evenly;
+    
+}
+
+.cars article{
+    gap: 20px;
+}
+
+.box01 {
+    display: flex;
+    align-items: flex-start;
+    height: 300px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.box02 {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.box03 {
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+/* -------------EXERCICIO 03 ------------- */
+
+/* align-items: flex-start; */
+/* Texto fica no inicio, na esquerda  */
+
+/* justify-content: center; */
+/* Texto fica no centro  */
+
+/* justify-content: flex-end; */
+/* Texto fica no final, na direita  */
+
+/* justify-content: space-between; */
+/* Texto se espalha para o direita, centro e esquerda */
+
+/* justify-content: space-evenly; */
+/* Texto se espalha sem encostar nas quinas */
