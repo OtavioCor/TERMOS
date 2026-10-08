@@ -44,6 +44,10 @@ SELECT *
 FROM cliente
 WHERE cidade = 'Limeira' OR cidade = 'Americana';
 
+SELECT *
+FROM cliente
+WHERE cidade IN ('Limeira', 'Americana');
+
 -- 8. Localize os produtos cujo nome contém a palavra “Café”.
 
 SELECT *
@@ -56,12 +60,16 @@ SELECT *
 FROM cliente
 WHERE telefone IS NULL;
 
+SELECT nome, COALESCE(telefone,'Não informado')
+FROM cliente AS telefone 
+WHERE telefone IS NULL;
+
 -- 10. Mostre os pedidos FINALIZADOS com valor acima de R$ 20,00, do maior para o menor valor.
 
 SELECT *
 FROM pedido
 WHERE valor_total > 20.00 AND status_pedido = 'FINALIZADO'
-ORDER BY valor_total ASC;
+ORDER BY valor_total DESC;
 
 -- PARTE C - CÁLCULOS E AGRUPAMENTOS
 
