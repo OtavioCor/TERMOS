@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "daf",
+    "quantidade": 4,
+    "custoUnitario": 4.5
+  },
+  {
+    "nome": "gafa",
+    "quantidade": 2,
+    "custoUnitario": 4414
+  },
+  {
+    "nome": "fah",
+    "quantidade": 4,
+    "custoUnitario": 64
+  },
+  {
+    "nome": "js",
+    "quantidade": 2,
+    "custoUnitario": 42.42
+  }
+]
