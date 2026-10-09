@@ -1,0 +1,34 @@
+.tabelaItem {
+    display: grid;
+
+    /* Exercício 01 */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* Exercício 02 */
+    /* grid-template-columns: 1fr 1fr; */
+
+    /* Exercício 03 */
+    /* grid-template-columns: 2fr 1fr; */
+
+    /* Exercício 04 */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /* Exercício 05 */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    .tabelaItem{
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Celular */
+@media (max-width: 320px){
+    .tabelaItem{
+        /* grid-template-columns: 1fr; */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}

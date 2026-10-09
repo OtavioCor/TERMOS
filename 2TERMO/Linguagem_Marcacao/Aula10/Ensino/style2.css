@@ -1,0 +1,10 @@
+@media (max-width: 100px) {
+    .grid-c {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .grid-l {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

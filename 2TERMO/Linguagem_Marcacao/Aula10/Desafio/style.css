@@ -1,0 +1,44 @@
+.industria {
+    /* Exercício 01 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Exercício 02 */
+    gap: 24px;
+}
+
+/* Exercício 03 */
+/* Tablet
+@media (max-width: 768px){
+    .industria{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+Exercício 04
+Celular
+@media (max-width: 320px){
+    .industria{
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* Exercício 05 */
+/* Tablet */
+@media (max-width: 768px){
+    .industria{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Celular */
+@media (max-width: 320px){
+    .industria{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Exercício 06 */
+/* A forma com max-width possui menos regra */
+
+/* Exercício 07 */
+/* Escolheria o max-width pela simplicidade */
