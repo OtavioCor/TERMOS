@@ -7,6 +7,36 @@ body{
     padding: 0;
 }
 
+/* --- NOSSOS CAFÉS --- */
+.cafe-branco {
+    box-shadow: rgba(0, 0, 0, 0.35);
+    height: 200px;
+    width: 100px;
+}
+
+.cafe-branco img {
+    height: 200px;
+}
+/* --- AMBIENTE --- */
+
+.ambienteTitulo {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+}
+
+.ambienteTitulo h2{
+    font-size: 48px;
+    text-align: left;
+    margin: 30px;
+}
+
+.ambienteTitulo button{
+    font-size: 8px;
+    border-radius: 3px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35);
+}
+
 /* --- CABEÇALHO --- */
 .TituloSmart {
     color: white;
@@ -102,5 +132,17 @@ button{
     align-items: center;
 }
 
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
+@media (max-width: 500px) {
+    .header-principal, .footer-principal {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 
