@@ -101,3 +101,31 @@ HAVING COUNT(*) >= 2;
 SELECT SUM(valor_total) AS Faturamento_Mensal
 FROM pedido
 WHERE status_pedido = 'FINALIZADO';
+
+-- Parte D — Relacionamentos Intermediário
+
+-- 16. Liste cada pedido exibindo: id do pedido, data, nome do cliente, status e valor total.
+
+-- 17. Liste cada produto acompanhado do nome de sua categoria.
+
+-- 18. Gere um relatório dos itens vendidos exibindo: pedido, produto, quantidade, preço
+-- unitário e subtotal.
+
+-- 19. Mostre todos os clientes, inclusive aqueles que nunca fizeram pedidos.
+
+-- 20. Liste apenas os clientes que nunca fizeram pedidos.
+
+-- Parte E — Desafio Gerencial Avançado
+
+-- 21. Informe quantos pedidos FINALIZADOS cada cliente realizou e quanto cada cliente
+-- gastou. Ordene do maior gasto para o menor.
+
+-- 22. Mostre a quantidade de produtos e o preço médio de cada categoria.
+
+-- 23. Descubra quais produtos possuem preço superior ao preço médio de todos os produtos.
+
+-- 24. Classifique os produtos como “Econômico”, “Intermediário” ou “Premium”, utilizando
+-- faixas de preço definidas por você.
+
+-- 25. Crie uma consulta autoral que responda a uma pergunta útil para a gestão da
+-- SmartCoffee. Escreva primeiro a pergunta de negócio e depois a consulta SQL.

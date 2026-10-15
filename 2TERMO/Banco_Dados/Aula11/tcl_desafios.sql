@@ -75,26 +75,65 @@ INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALU
 (@pedido, 1,4,4.50), (@pedido, 1,6,6.00);
 
 -- 16. Registre pagamento válido.
-
+INSERT INTO pagamento (id_pedido, valor, id_forma_pagamento) VALUES
+(@pedido, 69.80, 3);
 
 -- 17. Consulte pedido, itens e pagamento.
+SELECT *
+FROM pedido;
+
+SELECT *
+FROM item_pedido;
+
+SELECT *
+FROM pagamento;
 
 -- 18. COMMIT.
+COMMIT;
 
 -- 19. START TRANSACTION e crie pedido para cliente 2.
+START TRANSACTION;
+
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
+(NOW(), 'ABERTO', 4.50, 4);
+
+SELECT *
+FROM cliente;
 
 -- 20. Salve o id em @pedido_com_erro.
 
+SET @pedido_com_erro = LAST_INSERT_ID();
+
 -- 21. Tente inserir item com id_produto inexistente.
 
+INSERT INTO item_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALUES
+(@pedido, 10,4,4.50)
+
+SELECT *
+FROM produto;
+
 -- 22. Após observar a FK, ROLLBACK.
+ROLLBACK;
 
 -- 23. Consulte @pedido_com_erro e comprove que não permaneceu.
+
+SELECT *
+FROM pedido;
 
 -- 24. Tente excluir uma categoria que possui produtos.
 -- Explique em comentário por que foi bloqueado.
 
--- 25. Crie em uma transação um pedido temporário com dois itens,
+SELECT *
+FROM categoria;
+SELECT *
+FROM produto;
+
+delete from categoria 
+WHERE id_categoria = 7;
+
+-- Não foi possível apagar por causa da FK
+
+-- 25. Crie em uma transação um pedido temporário com dois itens
 -- exclua o pedido e observe ON DELETE CASCADE.
 -- Finalize com ROLLBACK para preservar a base.
 
