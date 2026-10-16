@@ -1,0 +1,108 @@
+/* ----- GERAL ----- */
+:root {
+    /* Paleta de Cores */
+    --cafe: #B35F11;
+    --laranja: #C26B18;
+    --bege: #F0D4BF;
+    --pastel: #FEF5EE;
+    --preto: #1E140F;
+    --marrom: #82684D;
+    --verde: #8A9A5B;
+    --taupe: #A69279;
+    --branco: #FFFFFF;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    /* ----- FONTE ----- */
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- CABEÇALHO ----- */
+.TituloSmart {
+    color: var(--branco);
+}
+.TituloCafe {
+    color: var(--cafe);
+}
+.navegacao {
+    justify-content: flex-end;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+/* ----- INÍCIO ----- */
+.banner{
+    /* background: radial-gradient(to bottom, var(--cafe), var(--white)); */
+    background-image: radial-gradient(115deg, var(--bege), var(--branco));
+}
+
+.titulo-laranja{
+    color: var(--laranja);
+    padding: 0px 0px 0px 40px;
+    letter-spacing: 8px;
+}
+
+.titulo-conecta{
+    font-size: 50px;
+    padding: 0px 0px 0px 40px;
+}
+
+.subtitulo{
+    padding: 0px 0px 0px 40px;
+}
+
+.inicio-cadapio{
+    margin: 0px 0px 0px 40px;
+}
+
+/* ----- NOSSOS CAFÉS ----- */
+
+/* ----- BACKGROUND ----- */
+
+.banner-bege{
+    background-color: var(--bege);
+    padding: 10px;
+}
+
+.banner-pastel{
+    background-color: var(--pastel);
+    padding: 10px;
+}
+
+.banner-marrom{
+    background-color: var(--marrom);
+    padding: 10px;
+}
+
+.banner-taupe{
+    background-color: var(--taupe);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ----- RESPONSIVIDADE ----- */
+
+/* Tablet */
+@media (max-width: 768px){
+    body {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Celular */
+@media (max-width: 320px){
+    body {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
