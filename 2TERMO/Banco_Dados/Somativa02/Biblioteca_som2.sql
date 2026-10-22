@@ -6,6 +6,8 @@ create database if not exists biblioteca_som2;
 
 use biblioteca_som2;
 
+drop database biblioteca_som2;
+
 -- 2. Tabela USUARIO — 6 pts
 -- Crie a tabela respeitando RN01, RN02 e RN03.
 
@@ -41,7 +43,7 @@ data_emprestimo datetime default current_timestamp,
 data_prevista date not null,
 data_devolucao date,
 status_emprestimo VARCHAR(20) DEFAULT 'ABERTO',
-CONSTRAINT ck_status_emprestimo CHECK (status_emprestimo = 'ABERTO'),
+CONSTRAINT ck_status_emprestimo CHECK (status_emprestimo IN ('ABERTO', 'DEVOLVIDO')),
 
 id_usuario INT,
 FOREIGN KEY (id_usuario) REFERENCES Usuario (id_usuario),
@@ -49,6 +51,7 @@ FOREIGN KEY (id_usuario) REFERENCES Usuario (id_usuario),
 id_livro INT,
 FOREIGN KEY (id_livro) REFERENCES livro (id_livro)
 );
+
 
 -- TABELAS ADICIONAIS
 
@@ -186,16 +189,135 @@ FROM livro;
 -- 17. INNER JOIN — 4 pts
 -- Liste ID do empréstimo, usuário, livro, data e status.
 
-SELECT P.ID_PEDIDO, P.DATA_PEDIDO, C.NOME AS CLIENTE, P.VALOR_TOTAL FROM PEDIDO AS P
-INNER JOIN cliente AS C
+SELECT E.id_emprestimo AS ID, U.nome AS Cliente, L.titulo AS Título, E.data_emprestimo AS emprestimo, E.status_emprestimo AS Status
+FROM emprestimo as E
+INNER JOIN usuario AS U
+ON U.id_usuario = E.id_usuario
+INNER JOIN livro as L
+ON L.id_livro = E.id_livro;
 
 -- 18. JOIN + WHERE — 3 pts
 -- Mostre apenas os empréstimos ABERTOS.
 
+SELECT E.id_emprestimo AS ID, U.nome AS Cliente, L.titulo AS Título, E.data_emprestimo AS emprestimo, E.status_emprestimo AS Status
+FROM emprestimo as E
+INNER JOIN usuario AS U
+ON U.id_usuario = E.id_usuario
+INNER JOIN livro as L
+ON L.id_livro = E.id_livro
+WHERE E.status_emprestimo = 'ABERTO';
+
 -- 19. GROUP BY — 4 pts
 -- Mostre cada usuário e sua quantidade de empréstimos, do maior para o menor.
+SELECT U.nome AS Cliente, COUNT(E.id_emprestimo) AS QTDE_Emprestimo 
+FROM emprestimo as E 
+INNER JOIN usuario AS U 
+ON U.id_usuario = E.id_usuario 
+GROUP BY U.id_usuario, U.nome 
+ORDER BY QTDE_Emprestimo DESC;
 
 -- 20. LEFT JOIN — 4 pts
--- Liste todos os usuários, inclusive os que nunca fizeram empréstimo, com a
--- quantidade de empréstimos de cada um.
+-- Liste todos os usuários, inclusive os que nunca fizeram empréstimo, com a quantidade de empréstimos de cada um.
 
+SELECT U.nome AS Cliente, COUNT(E.id_emprestimo) AS QTDE_Emprestimo 
+FROM usuario AS U
+LEFT JOIN emprestimo as E
+ON U.id_usuario = E.id_usuario 
+GROUP BY U.id_usuario, U.nome;
+
+-- 21. Transação de empréstimo — 7 pts
+-- START TRANSACTION;
+-- registre novo empréstimo;
+-- reduza o estoque em 1;
+-- consulte para conferir;
+-- finalize com COMMIT.
+
+insert into emprestimo (data_emprestimo, data_prevista, data_devolucao, status_emprestimo, id_usuario, id_livro) VALUES 
+(NOW(), '2026-10-27', NULL, DEFAULT, 4, 6);
+
+UPDATE livro
+SET quantidade_disponivel = quantidade_disponivel - 1
+WHERE id_livro = 6;
+
+SELECT * FROM livro;
+
+COMMIT;
+
+-- 22. ROLLBACK — 5 pts
+-- Altere propositalmente a quantidade de um livro dentro de uma transação, consulte, execute ROLLBACK e comprove o retorno do valor anterior.
+
+START TRANSACTION;
+
+UPDATE livro
+SET quantidade_disponivel = quantidade_disponivel - 10
+WHERE id_livro = 3;
+
+SELECT * FROM livro;
+
+ROLLBACK;
+
+
+-- 23. SAVEPOINT — 4 pts
+-- Faça duas alterações em livros diferentes; após a primeira, crie um SAVEPOINT. Desfaça apenas a segunda e confirme a primeira.
+
+START TRANSACTION;
+
+UPDATE livro
+SET quantidade_disponivel = quantidade_disponivel - 10
+WHERE id_livro = 3;
+
+SAVEPOINT reajuste_principe;
+
+UPDATE livro
+SET quantidade_disponivel = quantidade_disponivel - 10
+WHERE id_livro = 6;
+
+ROLLBACK TO SAVEPOINT reajuste_principe;
+
+COMMIT;
+
+-- 24. Transação de devolução — 4 pts
+-- Localize empréstimo ABERTO, marque DEVOLVIDO, registre data de devolução, aumente estoque em 1 e execute COMMIT.
+
+START TRANSACTION;
+
+UPDATE emprestimo
+SET status_emprestimo = 'DEVOLVIDO'
+WHERE status_emprestimo = 'ABERTO'
+
+UPDATE emprestimo
+SET data_devolucao = NOW()
+WHERE status_emprestimo = 'DEVOLVIDO'
+
+UPDATE livro 
+SET quantidade_disponivel = quantidade_disponivel + 1
+WHERE id_livro = 
+
+SELECT * FROM livro;
+SELECT * FROM emprestimo;
+
+ROLLBACK;
+
+-- 25. Análise técnica
+-- Para cada situação abaixo, identifique o mecanismo mais adequado entre constraint, integridade referencial, transação ou regra da aplicação, e justifique tecnicamente sua escolha.
+
+-- Cadastrar dois usuários com o mesmo e-mail.
+
+-- RESPOSTA
+-- Integridade referencial - Interfere a referencia quando chamar a variável, pois ela tem o mesmo valor
+
+-- Cadastrar dois livros com o mesmo ISBN.
+
+-- RESPOSTA
+-- Integridade referencial - Interfere a referencia quando chamar a variável, pois ela tem o mesmo valor
+
+-- Permitir quantidade disponível negativa.
+
+-- RESPOSTA
+-- CONSTRAINT - Pois o constraint impoe limite
+
+-- Criar empréstimo para usuário inexistente.
+
+-- Excluir livro com histórico de empréstimos.
+-- Gravar empréstimo e falhar na redução do estoque.
+-- Emprestar livro cuja quantidade disponível seja zero.
