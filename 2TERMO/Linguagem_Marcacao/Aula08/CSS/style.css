@@ -1,5 +1,6 @@
 * {
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -9,25 +10,32 @@ body{
 
 /* --- NOSSOS CAFÉS --- */
 .cafe-branco {
-    box-shadow: rgba(0, 0, 0, 0.35);
-    height: 200px;
-    width: 100px;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
 }
 
 .cafe-branco img {
+    width: 100%;
     height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 /* --- AMBIENTE --- */
 
 .ambienteTitulo {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-
+    flex: 1;
+    padding: 20px;
 }
 
 .ambienteTitulo h2{
-    font-size: 48px;
+    font-size: 40px;
     text-align: left;
-    margin: 30px;
+    margin: 25px 0;
+    color: white;
 }
 
 .ambienteTitulo button{
@@ -47,27 +55,37 @@ body{
 .navegacao {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
 }
 
 /* --- INICIO --- */
 .titulo-laranja{
     color: #C26B18;
-    padding: 0px 0px 0px 40px;
-    letter-spacing: 8px;
+    padding: 0 0 0 40px;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
 }
 .titulo-conecta{
     font-size: 50px;
-    padding: 0px 0px 0px 40px;
+    padding: 0 0 0 40px;
+    margin: 20px 0;
+    color: #3D2B20;
 }
 .subtitulo{
-    padding: 0px 0px 0px 40px;
+    padding: 0 0 0 40px;
+    color: #82684D;
+    font-size: 16px;
 }
 .inicio-cadapio{
-    margin: 0px 0px 0px 40px;
+    margin: 15px 0 0 40px;
 }
 .foto{
-    display: flex
-    justif
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
@@ -78,7 +96,8 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 14px;
-    padding: 5px;
+    padding: 8px;
+    transition: 0.3s;
 }
 
 ul{
@@ -99,19 +118,30 @@ article {
 
 .centralizar{
     text-align: center;
+    margin-bottom: 35px;
 }
 
 button{
     background-color: #C26B18;
     color: white;
     width: 140px;
-    height: 30px;
-    border-color: white;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
 }
 
 .banner-bege{
     background-color: #F0D4BF;
-    padding: 10px;
+    padding: 60px 40px;
+}
+
+.banner-bege ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .banner-pastel{
@@ -121,7 +151,12 @@ button{
 
 .banner-marrom{
     background-color: #82684D;
-    padding: 10px;
+    padding: 60px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: white;
 }
 
 .banner-taupe{
