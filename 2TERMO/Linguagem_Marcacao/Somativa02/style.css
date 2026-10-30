@@ -60,7 +60,7 @@ ul {
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
-    text-decoration: none;
+    
     margin: 0;
     padding: 0;
 }
@@ -68,6 +68,7 @@ ul {
 ul a {
     color: var(--texto);
     list-style: none;
+    text-decoration: none;
 }
 
 ul button {
@@ -170,9 +171,188 @@ ul button:hover {
 
 /* PERSONAGENS */
 
-.personagens p{
+.personagens{
+    background-color: var(--fundo);
+    padding:90px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personagens article img {
+    height: 350px;
+    width: 100%;
+    background-color: var(--fundo);
+    color: var(--texto-suave);
+    border-radius: 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.personagens .subtitulo{
     margin: 0px;
     color: var(--ciano);
     font-size: 15px;
 }
+
+.personagens h1 {
+    margin: 10px 0px;
+    font-size: 50px;
+}
+
+.personagens article{
+    height: 350px;
+    width: 450px;
+    background-color: var(--fundo-2);
+    color: var(--texto-suave);
+    border-radius: 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.personagens-texto {
+    width: 100%;
+}
+
+/* FUSÕES */
+
+.fusoes {
+    background-color: var(--fundo-2);
+    padding:90px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fusoes .subtitulo{
+    margin: 0px;
+    color: var(--ciano);
+    font-size: 15px;
+}
+
+.fusoes article{
+    height: 350px;
+    background-color: var(--fundo);
+    color: var(--texto-suave);
+    border-radius: 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+.fusoes header {
+    width: 100%;
+}
+
+/* TIMELINE */
+
+.timeline {
+    background-color: var(--fundo);
+    padding:90px;
+    justify-content: space-between;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline .subtitulo{
+    margin: 0px;
+    color: var(--ciano);
+    font-size: 15px;
+}
+
+.timeline h2{
+    color: var(--magenta);
+    font-size: 40px;
+    margin: 0;
+}
+
+.timeline article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeline article img {
+    width: 50%;
+}
+
+.timeline-direita {
+    flex-direction: row-reverse;
+}
+
+/* SOBRE */
+
+.sobre {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--roxo), var(--magenta));
+    color: var(--texto);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(255, 61, 129, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2 ease;
+    width: 100%;
+    height: 250px;
+    padding: 60px;
+}
+
+.sobre h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    margin: 0;
+}
+
+.sobre .texto-sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: var(--texto);
+}
+
+.sobre p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: var(--amarelo);
+}
+
+/* FOOTER */
+
+footer header{
+    display: flex;
+}
+
+.texto-footer {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+footer p {
+    color: var(--texto-suave);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px
+}
+
 
