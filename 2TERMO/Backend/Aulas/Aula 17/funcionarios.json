@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Nicolas",
+    "idade": 16,
+    "funcao": "Analista"
+  },
+  {
+    "id": 2,
+    "nome": "Matheus",
+    "idade": 17,
+    "funcao": "Desenvolvedor"
+  },
+  {
+    "id": 3,
+    "nome": "Pedro",
+    "idade": 13,
+    "funcao": "Gerente"
+  },
+  {
+    "id": 4,
+    "nome": "Otavio",
+    "idade": 67,
+    "funcao": "Scrum Master"
+  }
+]
