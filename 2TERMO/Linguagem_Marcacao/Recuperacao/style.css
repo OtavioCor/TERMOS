@@ -90,6 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 4px;
+    border: #10462f solid 2px;
 }
 
 .caixas {
@@ -117,6 +118,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 4px;
+    border: #10462f solid 2px;
 }
 
 footer {
