@@ -1,0 +1,144 @@
+:root{
+    --Branco: #FFFFFF;
+    --VerdeFloresta: #1B4332;
+    --VerdeSálvia: #84A98C;
+    --VerdeEsmeralda: #10B981;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--VerdeSálvia);
+    margin: 20px;
+}
+
+.titulo-secao{
+    display: flex;
+    background-image: linear-gradient(to right, var(--VerdeFloresta), var(--VerdeEsmeralda));
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo a, h1{
+    text-decoration: none;
+    list-style: none;
+    color: var(--Branco);
+}
+
+.titulo ul {
+    color: var(--Branco);
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio {
+    padding: 20px;
+    background-color: #5d8865;
+    margin: 20px;
+    border-radius: 30px;
+}
+
+.inicio h2, .inicio h5, .inicio p{
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    font-size: 18px;
+    color: var(--Branco);
+}
+
+.inicio img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.inicio button {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #0c6648;
+    color: var(--Branco);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.cards img{
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: var(--VerdeSálvia) solid 2px;
+    margin-bottom: 12px;
+}
+
+.cards-fundo {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.caixas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.caixa img {
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: var(--VerdeSálvia) solid 2px;
+    margin-bottom: 12px;
+}
+
+.caixa {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+footer {
+    font-size: 12px;
+    background-color: #1B4332;
+    color: var(--Branco);
+    padding: 10px;
+    justify-content: center;
+}
+footer p {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    font-size: 12px;
+    color: var(--Branco);
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .caixas {
+        grid-template-columns: 1fr;
+    }
+}
