@@ -66,6 +66,12 @@ body {
     color: var(--Branco);
 }
 
+.inicio a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--Branco);
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
