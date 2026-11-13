@@ -53,6 +53,7 @@ body {
 .inicio img {
     width: 100%;
     border-radius: 12px;
+    height: 300px;
 }
 
 .inicio button {
